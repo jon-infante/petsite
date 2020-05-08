@@ -2,6 +2,13 @@
 
 {% block content %}
 {% if request.user.is_authenticated %}
+<li>
+    <h3>{{pet.pet_name}}</h3>
+    <p>Species: {{pet.species}}</p>
+    <p>Breed: {{pet.breed}}</p>
+    <p>Weight: {{pet.weight_in_pounds}} lbs</p>
+    <p>Owner: {{pet.Owner}}</p>
+</li>
  {% else %}
 Please log in to view the rest of the pet site.
  {% endif %}
