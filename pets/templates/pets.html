@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if request.user.is_authenticated %}
+<ul>
+    {% for musician in musicians %}
+      <li>
+        <a href="/musician/{{ musician.id }}">{{ musician.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+ {% else %}
+Please log in to view the rest of the pet site.
+ {% endif %}
+{% endblock %}
