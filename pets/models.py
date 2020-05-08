@@ -12,7 +12,7 @@ class Pet(models.Model):
     )
 
     def __str__(self):
-        return self.name
+        return self.pet_name
 
 class Appointment(models.Model):
     date_of_appointment = models.DateField(blank=True, null=True)
@@ -21,4 +21,4 @@ class Appointment(models.Model):
     pet = models.ForeignKey(Pet, on_delete=models.CASCADE)
 
     def __str__(self):
-      return self.name
+      return str(self.pet)
