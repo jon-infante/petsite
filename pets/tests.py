@@ -65,7 +65,7 @@ class PetCreationPageTest(TestCase):
             pet = Pet.objects.create(pet_name='Ghost', species='Dog', breed='Great Dane', weight_in_pounds=10, Owner=user)
 
             #Post Request
-            response = self.client.post('/appointmentt/create/', 
+            response = self.client.post('/appointment/create/', 
                 {
                     'date_of_appointment': '2020-05-08', 
                     'duration_minutes': 45,
