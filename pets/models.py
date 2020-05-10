@@ -1,5 +1,10 @@
 from django.conf import settings
 from django.db import models
+from django.urls import reverse
+from django.utils.text import slugify
+from django.utils import timezone
+from django.contrib.auth.models import User
+
 
 class Pet(models.Model):
     pet_name = models.CharField(max_length=50)
@@ -22,3 +27,4 @@ class Appointment(models.Model):
 
     def __str__(self):
       return str(self.pet)
+
